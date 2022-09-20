@@ -6,9 +6,7 @@ const BlogController= require("../controllers/blogController")
 const authorValid=require("../validation/validation")
 const auth=require("../authentication/authentication")
 
-router.get("/test-me", function (req, res) {
-    res.send("My first ever api!")
-})
+
 
 
 
@@ -28,8 +26,7 @@ router.delete("/deleteBlogs/:blogId",authorValid.updateValidation,auth.authentic
 router.delete("/blogs",authorValid.delByQeury,auth.authentication,BlogController.deleteByQuery)
 
 
- 
-router.get("/delete",authorValid.delByQeury)
+
 
 
 
